@@ -35,4 +35,21 @@ class Project extends Model
     {
         return $this->hasManyTrough(To_do_list_item::class, To_do_list::class);
     }
+
+    public function scopeFilter($query, array $filters)
+    {
+        if($filters['search'] ?? false) {
+            $query->where('name', 'like', '%' . $filters['search'] . '%');
+        }
+
+        if($filters['done'] ?? false) {
+            $query->where('done', $filters['done']);
+        }
+
+        if($filters['user_id'] ?? false) {
+            $query->where('user_id', $filters['user_id']);
+        }
+
+        return $query;
+    }
 }

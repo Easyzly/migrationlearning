@@ -9,7 +9,8 @@ class ProjectController extends Controller
 {
     public function index()
     {
-        $projects = Project::all();
+        $data = [];
+        $projects = Project::filter($data)->get();
         return view('projects.index', compact('projects'));
     }
 
