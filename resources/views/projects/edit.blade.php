@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-layout title="Project Editing">
     <form action="{{ route('projects.update', $project->id) }}" method="post">
         @csrf
         @method('PATCH')
@@ -10,4 +8,4 @@
         <input type="time" name="end_time" id="end_time" value="{{ $project->end_time }}">
         <input type="submit" value="Aanpassen">
     </form>
-@endsection
+</x-layout>

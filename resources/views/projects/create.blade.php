@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-layout title="Project Creating">
     <form action="{{ route('projects.store') }}" method="post">
         @csrf
 
@@ -10,4 +8,4 @@
         <input type="time" name="end_time" id="end_time" value="00:00">
         <input type="submit" value="Toevoegen">
     </form>
-@endsection
+</x-layout>

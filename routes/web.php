@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', [\App\Http\Controllers\ShowcaseController::class, 'index']);
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 Route::resource('/projects', ProjectController::class);

@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-layout title="Project Overview">
     <div>
         @foreach($projects as $project)
             <div>
@@ -16,4 +14,4 @@
 
         @endforeach
     </div>
-@endsection
+</x-layout>
