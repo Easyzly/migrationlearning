@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     @include('Components.head')
+    @vite('resources/css/app.css')
     <title>{{$title}}</title>
 </head>
 <body>
