@@ -11,7 +11,8 @@
                     <input type="submit" value="Delete">
                 </form>
             </div>
-
         @endforeach
+
+        <x-button text="buhh"></x-button>
     </div>
 </x-layout>
